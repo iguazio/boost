@@ -112,8 +112,8 @@ class file_wrapper
    //!Closes a previously opened file mapping. Never throws.
    bool priv_open_or_create(ipcdetail::create_enum_t type, const char *filename, mode_t mode, const permissions &perm);
 
-   file_handle_t  m_handle;
-   mode_t      m_mode;
+   file_handle_t  m_handle = 0;
+   mode_t      m_mode = read_only;
    std::string       m_filename;
 };
 
