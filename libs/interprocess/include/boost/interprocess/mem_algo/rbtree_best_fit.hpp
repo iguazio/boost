@@ -74,7 +74,7 @@ class rbtree_best_fit
    rbtree_best_fit(const rbtree_best_fit &);
    rbtree_best_fit &operator=(const rbtree_best_fit &);
 
-   private:
+   protected:   // Iguazio private:
    struct block_ctrl;
    typedef typename boost::intrusive::
       pointer_traits<VoidPointer>::template
@@ -98,7 +98,7 @@ class rbtree_best_fit
 
    #if !defined(BOOST_INTERPROCESS_DOXYGEN_INVOKED)
 
-   private:
+   protected:   // Iguazio private:
 
    typedef typename bi::make_set_base_hook
       < bi::void_pointer<VoidPointer>
@@ -252,7 +252,7 @@ class rbtree_best_fit
    void* allocate_aligned     (size_type nbytes, size_type alignment);
 
    #if !defined(BOOST_INTERPROCESS_DOXYGEN_INVOKED)
-   private:
+   protected: // Iguazio private:
    static size_type priv_first_block_offset_from_this(const void *this_ptr, size_type extra_hdr_bytes);
 
    block_ctrl *priv_first_block();
